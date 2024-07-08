@@ -1217,6 +1217,14 @@ PrefabInstance:
       propertyPath: isLeftBranch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 530548084058540998, guid: 54cfe5050135bd34db29a143c7ddcbe6, type: 3}
+      propertyPath: birds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 530548084058540998, guid: 54cfe5050135bd34db29a143c7ddcbe6, type: 3}
+      propertyPath: birds.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1338833070732214287, guid: 54cfe5050135bd34db29a143c7ddcbe6, type: 3}
       propertyPath: m_FlipX
       value: 0

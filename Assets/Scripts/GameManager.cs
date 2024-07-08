@@ -18,9 +18,14 @@ public class GameManager : MonoBehaviour
                 if (hit.collider != null)
                 {
                     if (hit.collider.gameObject.TryGetComponent<Bird>(out Bird bird))
-                    {
-                        selectedBird = bird;
-                        selectedBird.isSelected = true;
+                    {   
+                        if(bird.currBranch.birds.Count == bird.birdNumber)
+                        {
+                            selectedBird = bird;
+                            selectedBird.isSelected = true;
+                        }
+                        else
+                            Debug.Log("Not outermost bird");
                     }
                     else if (hit.collider.gameObject.TryGetComponent<Branch>(out Branch branch))
                     {

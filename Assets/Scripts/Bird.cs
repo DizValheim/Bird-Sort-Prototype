@@ -9,13 +9,6 @@ public class Bird : MonoBehaviour
     Branch destBranch;
     public int birdNumber;
 
-    // public int BirdNumber => birdNumber;
-    // public void SetBirdNumber(int birdNumber)
-    // {
-    //     this.birdNumber = birdNumber;
-    // }
-
-    // Start is called before the first frame update
     void Start()
     {
         currBranch = GetComponentInParent<Branch>();
@@ -28,7 +21,7 @@ public class Bird : MonoBehaviour
         
     }
 
-    void CheckInput()
+    void DrawOutline()
     {
         
     }
