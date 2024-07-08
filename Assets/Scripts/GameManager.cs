@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -30,30 +29,19 @@ public class GameManager : MonoBehaviour
                         {
                             selectedBranch = branch;
 
-                            if(selectedBranch.birds.Count <= 4)
+                            if(selectedBranch.birds.Count <= 3 && selectedBird != selectedBird.currBranch)
                             {
-                                //Change Parent
-                                selectedBird.transform.SetParent(selectedBranch.transform);
-
-                                //Add to the list of branches and Set bird number
-                                selectedBranch.birds.Add(selectedBird);
-                                selectedBird.birdNumber = selectedBranch.birds.Count + 1;
-
-                                SetBirdPositionAndRotation();
+                                StartMoveSequence();
                             }
                             else
                             {
                                 Debug.Log("Branch Full!");
+                                //Check for same birds
                                 //Destroy Branch
                             }
 
-
-                            selectedBird = null;
-                            selectedBranch = null;
-
-                            // Set the bird's local position within the branch
-                            // based on your fixed positions
-                            // e.g., selectedBird.transform.localPosition = ...
+                            ResetBranchData();
+                            
                         }
                     }
                 }
@@ -61,14 +49,43 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void StartMoveSequence()
+    {
+        //Change Parent
+        selectedBird.transform.SetParent(selectedBranch.transform);
+
+        //Add to the list of branches and Set bird number
+        selectedBranch.birds.Add(selectedBird);
+        selectedBird.currBranch.birds.Remove(selectedBird);
+        
+        selectedBird.currBranch = selectedBranch;
+        selectedBird.birdNumber = selectedBranch.birds.Count;
+
+        SetBirdPositionAndRotation();
+        ResetBirdData();
+    }
+
+    private void ResetBranchData()
+    {
+        selectedBranch = null;
+    }
+
+    private void ResetBirdData()
+    {
+        selectedBird.isSelected = false;
+        selectedBird = null;
+    }
+
     private void SetBirdPositionAndRotation()
     {   
         //Play Animation
-        selectedBird.transform.localPosition = new(-15, birdYPositions[selectedBird.birdNumber - 2]);
-        if (selectedBranch.isLeftBranch)
-        {
-            // Debug.Log("Flipped");
-            selectedBird.GetComponent<SpriteRenderer>().flipX = true;
-        }
+        if(selectedBranch.isLeftBranch)
+            selectedBird.transform.localPosition = new(-15, birdYPositions[selectedBird.birdNumber - 1]);
+        else
+            selectedBird.transform.localPosition = new(-15, -birdYPositions[selectedBird.birdNumber - 1]);
+        selectedBird.GetComponent<SpriteRenderer>().flipX = selectedBranch.isLeftBranch;
+        
     }
+
+    
 }

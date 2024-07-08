@@ -19,6 +19,7 @@ public class Bird : MonoBehaviour
     void Start()
     {
         currBranch = GetComponentInParent<Branch>();
+        birdNumber = currBranch.birds.FindIndex(item => item == this) + 1;
     }
 
     // Update is called once per frame
