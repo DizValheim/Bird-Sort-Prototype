@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public enum BirdType
+{
+    Blue,
+    Green,
+    Red
+}
+
 public class Bird : MonoBehaviour
 {
+    public BirdType birdType;
     public bool isSelected;
     public Branch currBranch;
-    Branch destBranch;
     public int birdNumber;
 
     void Start()
@@ -15,15 +23,5 @@ public class Bird : MonoBehaviour
         birdNumber = currBranch.birds.FindIndex(item => item == this) + 1;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void DrawOutline()
-    {
-        
-    }
 
 }

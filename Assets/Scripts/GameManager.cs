@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     void HandleBirdSelection(Bird bird)
     {
-        if (bird.currBranch.birds.Count == bird.birdNumber)
+        if (bird.currBranch.birds.Count == bird.birdNumber)     //To check if the bird is outermost
         {
             selectedBird = bird;
             selectedBird.isSelected = true;
@@ -53,9 +53,10 @@ public class GameManager : MonoBehaviour
         {
             selectedBranch = branch;
 
-            if (selectedBranch.birds.Count <= 3 && selectedBird != selectedBird.currBranch)
+            if (!selectedBranch.isFull )
             {
-                StartMoveSequence();
+                if (selectedBranch.CheckBirdMatching(selectedBird))
+                    StartMoveSequence();
             }
             else
             {
