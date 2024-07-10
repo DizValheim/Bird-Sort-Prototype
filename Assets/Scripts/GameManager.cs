@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour
 
     void StartMoveSequence()
     {
+        selectedBird.GetComponent<Animator>().SetBool("Fly", true);
         selectedBird.transform.SetParent(selectedBranch.transform);
         selectedBird.currBranch.birds.Remove(selectedBird);
         selectedBird.currBranch = selectedBranch;
@@ -107,11 +108,15 @@ public class GameManager : MonoBehaviour
 
             currentBird.transform.position = Vector3.Lerp(currentBird.transform.position, targetWorldPosition, t);
 
+
             yield return null;
             
         }
+        currentBird.GetComponent<Animator>().SetBool("Fly", false);
 
         currentBird.transform.position = targetWorldPosition;
+
+        yield return new WaitForSeconds(0.5f);
 
         ResetBirdData();
         if(selectedBranch.isFull && selectedBranch.CheckBirdMatching())
