@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -53,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             selectedBranch = branch;
 
-            if (!selectedBranch.isFull )
+            if (!selectedBranch.isFull)
             {
                 if (selectedBranch.CheckBirdMatching(selectedBird))
                     StartMoveSequence();
@@ -61,22 +62,22 @@ public class GameManager : MonoBehaviour
             else
             {
                 Debug.Log("Branch Full!");
-                // Handle branch full scenario (e.g., display a message or destroy the branch)
             }
 
-            ResetBranchData();
+            
         }
     }
 
     void StartMoveSequence()
     {
         selectedBird.transform.SetParent(selectedBranch.transform);
-        selectedBranch.birds.Add(selectedBird);
         selectedBird.currBranch.birds.Remove(selectedBird);
         selectedBird.currBranch = selectedBranch;
+        selectedBranch.birds.Add(selectedBird);
         selectedBird.birdNumber = selectedBranch.birds.Count;
-        SetBirdPositionAndRotation();
-        ResetBirdData();
+        StartCoroutine(SetBirdPositionAndRotation());
+        selectedBird.GetComponent<SpriteRenderer>().flipX = selectedBranch.isLeftBranch;
+        
     }
 
     void ResetBranchData()
@@ -90,11 +91,33 @@ public class GameManager : MonoBehaviour
         selectedBird = null;
     }
 
-    void SetBirdPositionAndRotation()
+    IEnumerator SetBirdPositionAndRotation()
     {
-        float xPosition =  -15f;
-        float yPosition = (selectedBranch.isLeftBranch ? 1 : -1) * birdYPositions[selectedBird.birdNumber - 1];
-        selectedBird.transform.localPosition = new Vector3(xPosition, yPosition, 0f);
-        selectedBird.GetComponent<SpriteRenderer>().flipX = selectedBranch.isLeftBranch;
+        Vector3 targetWorldPosition = selectedBranch.transform.TransformPoint(new Vector3(-17f, (selectedBranch.isLeftBranch ? 1 : -1) * birdYPositions[selectedBird.birdNumber - 1], 0f));
+
+        float elapsedTime = 0f;
+        float transitionDuration = 0.5f;
+        
+        Bird currentBird = selectedBird;
+
+        while (elapsedTime < transitionDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsedTime / transitionDuration);
+
+            currentBird.transform.position = Vector3.Lerp(currentBird.transform.position, targetWorldPosition, t);
+
+            yield return null;
+            
+        }
+
+        currentBird.transform.position = targetWorldPosition;
+
+        ResetBirdData();
+        if(selectedBranch.isFull && selectedBranch.CheckBirdMatching())
+        {
+            Destroy(selectedBranch.gameObject);
+        }
+        ResetBranchData();
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9dcb40bb6c1f3145ba2b526e6a1cd03
+guid: 32555edd7470e6a4e955006e83b864c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BirdSpriteBig_0
+      name: Bird_Red_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea5ee4fde11d6ff42bf22c80ca0939cc
-      internalID: -532599682
+      spriteID: 81d38d3467e41694dafa1ea1c0fd9db2
+      internalID: 1661515539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_1
+      name: BirdSpriteBig_Red_1
       rect:
         serializedVersion: 2
         x: 160
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b34f94b5d8f4aea4f9519d624d144e4e
-      internalID: 1033639301
+      spriteID: 06126836d54a7c64fb8ed0f713427ea4
+      internalID: -296651937
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_11
+      name: BirdSpriteBig_Red_8
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eccd8e49f5d2f3541b97d2bb36a61e99
-      internalID: -2116406857
+      spriteID: 2e7422ea706c4e943b7b054cde5c1e47
+      internalID: -355185009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_12
+      name: BirdSpriteBig_Red_9
       rect:
         serializedVersion: 2
         x: 160
@@ -200,60 +200,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88b1d1b8cd859243bfd94fa1a04aefb
-      internalID: -1640101860
+      spriteID: c263245f457486742be58f3154ff9426
+      internalID: -69422857
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_13
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b2645e3a63b2c014693e3a7861bb882d
-      internalID: 742060321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BirdSpriteBig_14
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 1
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79b0a0923003bb04598c5d0514614254
-      internalID: -686136264
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BirdSpriteBig_15
+      name: BirdSpriteBig_Red_10
       rect:
         serializedVersion: 2
         x: 320
-        y: 1
+        y: 160
         width: 160
         height: 160
       alignment: 0
@@ -263,35 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e13514345aa5f2f4ebd784f93aeaa7bc
-      internalID: -1124587386
+      spriteID: 7c627a0876b08f24083ec5bd15cbdba6
+      internalID: -1660636787
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_22
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 161
-        width: 160
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b0544a0c3c4e6c409e74d0355e4f409
-      internalID: -1455683994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BirdSpriteBig_23
+      name: BirdSpriteBig_Red_11
       rect:
         serializedVersion: 2
         x: 480
@@ -305,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3db6d8a89cc637946962b40fad9b3c96
-      internalID: -785252502
+      spriteID: a52e1bdfe8c571d4089211a828a91b2b
+      internalID: 1533126782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_24
+      name: BirdSpriteBig_Red_12
       rect:
         serializedVersion: 2
         x: 640
@@ -326,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cde6fc4e7a8269b4cbddeb395a980908
-      internalID: -1982472270
+      spriteID: 3f00f0ffba9f2d74e92d42b63252eca9
+      internalID: -783975031
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_25
+      name: BirdSpriteBig_Red_13
       rect:
         serializedVersion: 2
         x: 800
@@ -347,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d905d8d28d9ca824a9075eaaaa7100d8
-      internalID: 434877409
+      spriteID: e49a820a8a7c4f14b8e6ae4b4fa457b0
+      internalID: -334013795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_26
+      name: BirdSpriteBig_Red_14
       rect:
         serializedVersion: 2
         x: 960
@@ -368,14 +305,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b5a64ab65160e541b9aa7dd47ca50ea
-      internalID: 46348369
+      spriteID: f0d7a69223618f34ca79174a866f12e6
+      internalID: 311088309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BirdSpriteBig_27
+      name: BirdSpriteBig_Red_15
       rect:
         serializedVersion: 2
         x: 1120
@@ -389,8 +326,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ba2559c296ef3d4ba00c835cc171bf2
-      internalID: -2077971013
+      spriteID: 47c301fccae5ab64dbf422027998f93d
+      internalID: -1826611706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdSpriteBig_Red_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6679a1ed535e9b642b245d4a9425e8ae
+      internalID: -37521856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdSpriteBig_Red_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ade67f570334764596f0720b966d5ee
+      internalID: -1653799027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BirdSpriteBig_Red_18
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4edc013715aca924b92ffb9c90f2c6f0
+      internalID: -464576421
       vertices: []
       indices: 
       edges: []
@@ -406,34 +406,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BirdSpriteBig_0: -532599682
-      BirdSpriteBig_1: 1033639301
-      BirdSpriteBig_10: -1005706479
-      BirdSpriteBig_11: -2116406857
-      BirdSpriteBig_12: -1640101860
-      BirdSpriteBig_13: 742060321
-      BirdSpriteBig_14: -686136264
-      BirdSpriteBig_15: -1124587386
-      BirdSpriteBig_16: -1234817794
-      BirdSpriteBig_17: -1570939044
-      BirdSpriteBig_18: -956174787
-      BirdSpriteBig_19: 833540865
-      BirdSpriteBig_2: 344825040
-      BirdSpriteBig_20: 600563768
-      BirdSpriteBig_21: 502277103
-      BirdSpriteBig_22: -1455683994
-      BirdSpriteBig_23: -785252502
-      BirdSpriteBig_24: -1982472270
-      BirdSpriteBig_25: 434877409
-      BirdSpriteBig_26: 46348369
-      BirdSpriteBig_27: -2077971013
-      BirdSpriteBig_3: -349409558
-      BirdSpriteBig_4: -428951484
-      BirdSpriteBig_5: 236304143
-      BirdSpriteBig_6: 814702275
-      BirdSpriteBig_7: -2120969849
-      BirdSpriteBig_8: -212068622
-      BirdSpriteBig_9: -948415036
+      BirdSpriteBig_Red_1: -296651937
+      BirdSpriteBig_Red_10: -1660636787
+      BirdSpriteBig_Red_11: 1533126782
+      BirdSpriteBig_Red_12: -783975031
+      BirdSpriteBig_Red_13: -334013795
+      BirdSpriteBig_Red_14: 311088309
+      BirdSpriteBig_Red_15: -1826611706
+      BirdSpriteBig_Red_16: -37521856
+      BirdSpriteBig_Red_17: -1653799027
+      BirdSpriteBig_Red_18: -464576421
+      BirdSpriteBig_Red_19: 910000076
+      BirdSpriteBig_Red_2: 2018950873
+      BirdSpriteBig_Red_20: -410810636
+      BirdSpriteBig_Red_21: 1815919710
+      BirdSpriteBig_Red_22: -891257412
+      BirdSpriteBig_Red_23: -659117166
+      BirdSpriteBig_Red_3: -759179264
+      BirdSpriteBig_Red_4: 271842356
+      BirdSpriteBig_Red_5: -1345178905
+      BirdSpriteBig_Red_6: -282978774
+      BirdSpriteBig_Red_7: 359546310
+      BirdSpriteBig_Red_8: -355185009
+      BirdSpriteBig_Red_9: -69422857
+      Bird_Red_0: 1661515539
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

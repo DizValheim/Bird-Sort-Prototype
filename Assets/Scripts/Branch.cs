@@ -11,9 +11,6 @@ public class Branch : MonoBehaviour
     void Update()
     {
         isFull = birds.Count == 4;
-        if(isFull)
-            if(CheckBirdMatching())
-                Destroy(gameObject); 
     }
 
     public bool CheckBirdMatching()
